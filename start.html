@@ -1,0 +1,48 @@
+
+
+<div id="socialnetworks" class="socialnetworks">
+
+    <a id="Social_Whatsapp" href="https://api.whatsapp.com/send?phone=+15022943409&text=!Buenas" class="icon" title="Whatsapp" target="_blank" style="font-size: 35px;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a id="Social_Telegram" href="https://t.me/DEVBoxWARE" class="icon" title="Telegram" target="_blank" style="font-size: 32px;">
+        <i class="fab fa-telegram"></i>
+    </a>
+                <a id="Social_Discord" href="https://discord.gg/QHf4m3RjQQ" class="icon" title="Discord" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <span id ="DiscordUserOnline" class="apiSpan">
+                          <script>
+                               fetch('https://discord.com/api/guilds/657353892685807619/widget.json').then(response => response.text()).then(text => document.getElementById("DiscordUserOnline").innerHTML=JSON.parse(text).presence_count);
+                    </script>
+                    </span>
+                </a>
+                <a id="Social_YouTube" href="https://www.youtube.com/@DEVBoxWARE" class="icon" title="YouTube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a id="Social_GitHub" href="https://github.com/devboxware" class="icon" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+
+            </div>
+
+            <div id="Start">
+
+                <div id="BackgroundHeader" title="ShadowBackgroundHeader">
+                    <img src="https://devboxware.github.io/assets/image/start/background.jpg" style="
+                                    /* background-image: url('https://devboxware.github.io/assets/image/start/background.jpg'); */
+                                    background-size: contain;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    /* height: 500px; */
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: white;
+                                    text-align: center;
+                                    ">
+                    
+                                    </div>
+
+            </div>

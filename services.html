@@ -1,0 +1,812 @@
+<div id="Services">
+ 
+    <center>
+
+        <span class="fa HeaderText" style="padding-top: 20px;">SERVICIOS</span>
+
+        <div>
+
+            <div class="PresentationCardDIV" title="WhiteShadowExchange">
+
+          
+                <div>
+    
+                    <span class="fa HeaderText" style="margin: 20px;">TASAS DE CAMBIO EN CUBA</span>
+    
+                <table style="/* color: rgb(66 153 232); */font-weight: bold;">
+                    <thead>
+                        <tr>
+                            <th>MONEDA</th>
+                            <th>VALOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EUR</td>
+                            <td id="EURValue"></td>
+                        </tr>
+                        <tr>
+                            <td>USD</td>
+                            <td id="USDValue"></td>
+                        </tr>
+                        <tr>
+                            <td>MLC</td>
+                            <td id="MLCValue"></td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                </div>
+    
+                <!--<div id="divContenedor" style="
+                width: 100%;
+                height: 500px; /* Establece la altura deseada para el div */
+                position: initial;
+                overflow: hidden;
+                ">
+                <iframe src="https://img.cambiocuba.money/chart" id="smiIframe" style="
+                width: 100%;
+                height: 100%;
+                border: none;
+                "></iframe>
+             </div>  
+            -->
+    
+    
+    
+             
+        <div>
+            <span class="fa HeaderText" style="margin: 10px;">CALCULO CAMBIARIO EN CUBA</span>
+    
+    
+    <div style="margin: 20px;">
+    
+    <div>
+    
+    <div>
+    
+    <span class="fa HeaderText">ENVÍAS</span></div><div>
+    <input title="WhiteShadowExchange" id="ExchangeTextBoxValueSend" type="text" inputmode="numeric" style="
+    background-color: #2c2c32;
+    color: white;
+    border: 0.1px solid white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    ">
+    
+    <select title="BlueShadowButtomActions" id="ExchangeComboBoxTypeValueSend" style="background-color: rgba(0, 96, 164);
+    color: white;
+    /*border: 0.1px solid white;*/
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    ">
+    
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="MLC">MLC</option>
+    <option value="CUP">CUP</option>
+    </select>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <div style="margin: 20px;">
+    <div>
+    <span class="fa HeaderText">RECIBES</span>
+    </div>
+    
+    <div>
+    <input title="WhiteShadowExchange" id="ExchangeTextBoxValueRecibe" value="" type="text" inputmode="numeric" style="
+    background-color: #2c2c32;
+    color: white;
+    border: 0.1px solid white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    ">
+    
+    <select title="BlueShadowButtomActions" id="ExchangeComboBoxTypeValueRecibe" style="background-color: rgba(0, 96, 164);
+    color: white;
+    /*border: 0.1px solid white;*/
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    ">
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="MLC">MLC</option>
+    <option value="CUP">CUP</option>
+    </select>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+            </div>
+    
+    
+    
+    
+            <div class="PresentationCardDIV" title="WhiteShadowExchange">
+    
+                <div class="PresentationCardDIV">
+    
+                    <div style="margin: 20px;">
+                        <span class="fa HeaderText">ENVÍO DE REMESAS A CUBA</span>
+                    </div>
+    
+                  <div style="margin: 20px;">
+                    <div>
+                        <span class="fa HeaderText">ENVÍAS</span>
+                        </div>
+    
+                        <div>
+                        <input title="WhiteShadowExchange" id="RemittanceTextBoxValueSend" type="text" inputmode="numeric" style="
+                        background-color: #2c2c32;
+                        color: white;
+                        border: 0.1px solid white;
+                        padding: 5px;
+                        text-align: center;
+                        border-radius: 20px;
+                        ">
+                        <select title="BlueShadowButtomActions" id="RemittanceComboBoxTypeValueSend" style="background-color: rgba(0, 96, 164);
+                        color: white;
+                        /*border: 0.1px solid white;*/
+                        padding: 5px;
+                        text-align: center;
+                        border-radius: 20px;
+                        ">
+    
+                        <option value="USD-Zelle">USD-Zelle</option>
+                        <option value="USDT">USDT</option>
+                        </select>
+    
+                        </div>
+                  </div>
+    
+                  <div>
+                    <span id="RemittanceTax" class="fa HeaderText" style="font-size: 20px;">Impuesto </span>
+                    <span id="RemittanceTaxPorcentValue" class="fa HeaderText" style="color: rgba(125, 22, 215);">0%</span>
+                    <span id="Remittance==" class="fa HeaderText" style="font-size: 20px;">=</span>
+                    <span id="RemittanceTaxValue" class="fa HeaderText" style="color: rgba(0, 96, 164);">$0</span>
+    
+                  </div>
+                  
+                  <!--<div>
+                    <span id="Penny" class="fa HeaderText" style="font-size: 20px;">Propina </span>
+                    <span id="Penny==" class="fa HeaderText" style="font-size: 20px;">=</span>
+                    <span id="PennyTaxValue" class="fa HeaderText" style="color: rgba(0, 96, 164);">$0</span>
+                  </div>-->
+    
+                <div style="margin: 20px;">
+                <div>
+                <span class="fa HeaderText">RECIBES</span>
+                </div>
+    
+                <div>
+                <input title="WhiteShadowExchange" id="RemittanceTextBoxValueRecibe" value="" type="text" inputmode="numeric" style="
+                background-color: #2c2c32;
+                color: white;
+                border: 0.1px solid white;
+                padding: 5px;
+                text-align: center;
+                border-radius: 20px;
+                ">
+    
+                <select title="BlueShadowButtomActions" id="RemittanceComboBoxTypeValueRecibe" style="background-color: rgba(0, 96, 164);
+                color: white;
+                /*border: 0.1px solid white;*/
+                padding: 5px;
+                text-align: center;
+                border-radius: 20px;
+                ">
+                <option value="USD-Cash">USD-Cash</option>
+                <option value="MLC">MLC</option>
+                </select>
+    
+                </div>
+    
+                </div>
+                <div>
+                    <button id="ContactSendRemittance" onclick="ContactSendRemittanceMethodo()" style="
+                    background-color: rgba(0, 96, 164);
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                   " title="BlueShadowButtomActions">CONTACTAR ENVÍO</button>
+                         </div>
+                </div>
+    
+               
+            </div>
+
+        </div>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+<center style="margin-top: 20px;">
+
+    <div>
+
+<div style="margin: 10px;">
+
+<div class="PresentationCardDIV" title="AccesBanc">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/accesbanc.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Acceso a ENZONA,BANCAREMOTA desde el 🌎</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV" title="TransferRemittances">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/remittances.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Gestión de Transferencias entre Países</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV" title="GridCard">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/GiftCard.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span >Venta de todos tipos de tarjetas de Regalo</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV " title="Nauta" >
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/Nauta.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span >Internet WIFI-ETECSA o NAUTA HOGAR a 2.5CUP la Hora</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV " title="Nod32V8">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/Nod32V8.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span >Actualización Nod32 desde Internet</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV " title="SendAmazon" >
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/SendAmazon.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span >Envío de 📦 desde Amazon a Cuba</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV "  title="RechargeCell">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/RechargeCell.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span >Recarga 📲📱 desde el Exterior</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV "  title="WebDesign">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/WebDesign.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Creación de Páginas WEB para Publicidad</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV "  title="YouTubePremium">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/YouTubePremium.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Usted podrá ver Todo YouTube sin Publicidad</span>
+    </div>
+
+</div>
+</div>
+<div class="PresentationCardDIV "  title="NETFLIX">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/NETFLIX.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Suscripción para ver NETFLIX</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV "  title="VPN_USA">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/VPN_USA.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Navegue en Internet mas estable y como si estuviese en USA</span>
+    </div>
+
+</div>
+</div>
+
+<div class="PresentationCardDIV "  title="TeamSpeak">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/TeamSpeak.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Servidor Privado TeamSpeak3 en INTERNET</span>
+    </div>
+
+</div>
+</div>
+<div class="PresentationCardDIV "  title="Mumble">
+    <div style="display: grid;width: 350px;">
+    <img class="PresentationCardIMG" src="./assets/image/services/Mumble.jpg"></img>
+    <div Class="SpanPresentationCard">
+        <span>Servidor Privado MUMBLE en INTERNET</span>
+    </div>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+</center>
+
+<script>
+
+    var EURValue;
+    var USDValue;
+    var MLCValue;
+
+        var ExchangeEUR_USD;
+        var ExchangeEUR_MLC;
+
+        var ExchangeUSD_EUR;
+        var ExchangeUSD_MLC;
+
+        var ExchangeMLC_EUR;
+        var ExchangeMLC_USD;
+
+        var Tax_USD_Zelle_to_USD_Cash=15;
+        var Tax_USD_Zelle_to_MLC=7;
+        var Tax_USDT_to_USD_Cash=8;
+        var Tax_USDT_to_MLC=0;
+
+
+        function AllowOnliNumbers(input) {
+  input.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9.]/g, '');
+  });
+}
+
+
+
+        function GetCurrencyValue() {
+
+        fetch('https://eltoque.com')
+                      .then(response => response.text())
+                      .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        //const elements = doc.getElementsByClassName('price-text change-plus');
+
+                        const elements = doc.getElementsByClassName('price-text');
+                        const ElementsT_cell = doc.getElementsByClassName('t-cell');
+
+Array.from(ElementsT_cell).forEach(function(element) {
+  console.log(element);
+});
+
+
+
+                        var valueText = elements[0].textContent.trim();
+                        var valueArray = valueText.split(" ");
+                        EURValue =parseFloat(valueArray[0]);
+
+                        valueText = elements[1].textContent.trim();
+                        valueArray = valueText.split(" ");
+                        USDValue =parseFloat(valueArray[0]);
+
+                        valueText = elements[2].textContent.trim();
+                        valueArray = valueText.split(" ");
+                        MLCValue =parseFloat(valueArray[0]);
+
+
+                        document.getElementById("EURValue").innerHTML=EURValue+" CUP";
+                        document.getElementById("USDValue").innerHTML=USDValue+" CUP";
+                        document.getElementById("MLCValue").innerHTML=MLCValue+" CUP";
+
+
+                        ExchangeEUR_USD=parseFloat((EURValue/USDValue));
+                        ExchangeEUR_MLC=parseFloat((EURValue/MLCValue));
+
+                        ExchangeUSD_EUR=parseFloat((USDValue/EURValue));
+                        ExchangeUSD_MLC=parseFloat((USDValue/MLCValue));
+
+                        ExchangeMLC_EUR=parseFloat((MLCValue/EURValue));
+                        ExchangeMLC_USD=parseFloat((MLCValue/USDValue));
+
+                      })
+                      .catch(error => {
+                        console.error('Error:', error);
+                      });
+
+
+}
+GetCurrencyValue();
+
+
+
+        function CalculateExchangeSend()
+        {
+        try
+        {
+           if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="EUR")
+           {
+            if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeEUR_USD).toFixed(2);
+
+            }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeEUR_MLC).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*EURValue).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+            }
+           }
+
+           if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="USD")
+           {
+            if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeUSD_EUR).toFixed(2);
+
+            }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeUSD_MLC).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*USDValue).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+            }
+           }
+
+           if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="MLC")
+           {
+            if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeMLC_USD).toFixed(2);
+
+            }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeMLC_EUR).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*MLCValue).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+            }
+           }
+
+           if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="CUP")
+           {
+            if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value/USDValue).toFixed(2);
+
+            }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value/EURValue).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value/MLCValue).toFixed(2);
+            }
+            else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+            }
+           }
+
+          /* if(document.getElementById("ExchangeTextBoxValueSend").value=="")
+            {
+                document.getElementById("ExchangeTextBoxValueSend").value=0;
+            }
+            if(document.getElementById("ExchangeTextBoxValueRecibe").value=="")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=0;
+            }
+            if(parseFloat(document.getElementById("ExchangeTextBoxValueSend").value)==0)
+            {
+                document.getElementById("ExchangeTextBoxValueSend").value="";
+            }
+            if(parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value)==0)
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value="";
+            }*/
+
+        }
+        catch
+        {
+        }
+
+        }
+
+        function CalculateExchangeReceive()
+        {
+
+            try
+            {
+
+            if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="EUR")
+            {
+                if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat((document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_USD)).toFixed(2);
+
+                }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_MLC).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/EURValue).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                }
+            }
+            else if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="USD")
+            {
+                if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeUSD_EUR).toFixed(2);
+
+                }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeUSD_MLC).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/USDValue).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                }
+            }
+            else if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="MLC")
+            {
+                if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeMLC_EUR).toFixed(2);
+
+                }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeMLC_USD).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/MLCValue).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                }
+            }
+            else if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="CUP")
+            {
+                if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value*EURValue).toFixed(2);
+
+                }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value*USDValue).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value*MLCValue).toFixed(2);
+                }
+                else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                {
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                }
+            }
+
+          /* if(document.getElementById("ExchangeTextBoxValueSend").value=="")
+            {
+                document.getElementById("ExchangeTextBoxValueSend").value=0;
+            }
+            if(document.getElementById("ExchangeTextBoxValueRecibe").value=="")
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value=0;
+            }
+            if(parseFloat(document.getElementById("ExchangeTextBoxValueSend").value)==0)
+            {
+                document.getElementById("ExchangeTextBoxValueSend").value="";
+            }
+            if(parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value)==0)
+            {
+                document.getElementById("ExchangeTextBoxValueRecibe").value="";
+            }*/
+        }
+        catch
+        {
+        }
+        }
+
+        AllowOnliNumbers(document.getElementById("ExchangeTextBoxValueSend"));
+        AllowOnliNumbers(document.getElementById("ExchangeTextBoxValueRecibe"));
+
+        document.getElementById("ExchangeTextBoxValueSend").addEventListener("input", CalculateExchangeSend);
+        document.getElementById("ExchangeComboBoxTypeValueSend").addEventListener("change", CalculateExchangeSend);
+        document.getElementById("ExchangeComboBoxTypeValueRecibe").addEventListener("change", CalculateExchangeSend);
+        document.getElementById("ExchangeTextBoxValueRecibe").addEventListener("input", CalculateExchangeReceive);
+
+
+
+        function CalculateRemittanceSend()
+        {
+        try
+        {
+            if (document.getElementById("RemittanceComboBoxTypeValueSend").value=="USD-Zelle")
+            {
+            if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="USD-Cash")
+            {
+                document.getElementById("RemittanceTextBoxValueRecibe").value=parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(1-Tax_USD_Zelle_to_USD_Cash/100)).toFixed(2);
+                document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USD_Zelle_to_USD_Cash/100)).toFixed(2);
+                document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USD_Zelle_to_USD_Cash+"%";
+
+            }else if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="MLC")
+            {
+                document.getElementById("RemittanceTextBoxValueRecibe").value=parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(1-Tax_USD_Zelle_to_MLC/100)).toFixed(2);
+                document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USD_Zelle_to_MLC/100)).toFixed(2);
+                document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USD_Zelle_to_MLC+"%";
+            }
+
+            }else if(document.getElementById("RemittanceComboBoxTypeValueSend").value=="USDT")
+           {
+            if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="USD-Cash")
+            {
+                document.getElementById("RemittanceTextBoxValueRecibe").value=parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(1-Tax_USDT_to_USD_Cash/100)).toFixed(2);
+                document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USDT_to_USD_Cash/100)).toFixed(2);
+                document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USDT_to_USD_Cash+"%";
+
+            }else if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="MLC")
+            {
+                document.getElementById("RemittanceTextBoxValueRecibe").value=parseFloat(document.getElementById("RemittanceTextBoxValueSend").value/(1-Tax_USDT_to_MLC/100)).toFixed(2);
+                document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USDT_to_MLC/100)).toFixed(2);
+                document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USDT_to_MLC+"%";
+            }
+
+
+        }
+
+        }
+        catch
+        {
+        }
+
+        }
+
+        function CalculateRemittanceReceive()
+        { 
+        try
+        {
+            if (document.getElementById("RemittanceComboBoxTypeValueSend").value=="USD-Zelle")
+            {
+                if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="USD-Cash")
+                {
+                    document.getElementById("RemittanceTextBoxValueSend").value=parseFloat(document.getElementById("RemittanceTextBoxValueRecibe").value /(1 - Tax_USD_Zelle_to_USD_Cash / 100)).toFixed(2);
+                    document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USD_Zelle_to_USD_Cash/100)).toFixed(2);
+                    document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USD_Zelle_to_USD_Cash+"%";
+
+                }else if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="MLC")
+                {
+                    document.getElementById("RemittanceTextBoxValueSend").value=parseFloat(document.getElementById("RemittanceTextBoxValueRecibe").value /(1 - Tax_USD_Zelle_to_MLC / 100)).toFixed(2);
+                    document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USD_Zelle_to_MLC/100)).toFixed(2);
+                    document.getElementById("PennyTaxValue").innerHTML="$"+parseFloat(parseInt(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USD_Zelle_to_MLC/100)+1).toFixed(2)).toFixed(2);
+                    document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USD_Zelle_to_MLC+"%";
+                }
+            }else if(document.getElementById("RemittanceComboBoxTypeValueSend").value=="USDT")
+           {
+                if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="USD-Cash")
+                {
+                    document.getElementById("RemittanceTextBoxValueSend").value=parseFloat(document.getElementById("RemittanceTextBoxValueRecibe").value /(1 - Tax_USDT_to_USD_Cash / 100)).toFixed(2);
+                    document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USDT_to_USD_Cash/100)).toFixed(2);
+                document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USDT_to_USD_Cash+"%";
+                }else if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value=="MLC")
+                {
+
+                    document.getElementById("RemittanceTextBoxValueSend").value=parseFloat(document.getElementById("RemittanceTextBoxValueRecibe").value/(1 - Tax_USDT_to_MLC / 100)).toFixed(2);
+                    document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_USDT_to_MLC/100)).toFixed(2);
+                    document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_USDT_to_MLC+"%";
+                }
+
+            }
+
+        }
+        catch
+        {
+        }
+
+        }
+
+        AllowOnliNumbers(document.getElementById("RemittanceTextBoxValueSend"));
+        AllowOnliNumbers(document.getElementById("RemittanceTextBoxValueRecibe"));
+
+        document.getElementById("RemittanceTextBoxValueSend").addEventListener("input", CalculateRemittanceSend);
+        document.getElementById("RemittanceComboBoxTypeValueSend").addEventListener("change", CalculateRemittanceSend);
+        document.getElementById("RemittanceComboBoxTypeValueRecibe").addEventListener("change", CalculateRemittanceSend);
+        document.getElementById("RemittanceTextBoxValueRecibe").addEventListener("input", CalculateRemittanceReceive);
+
+
+
+        function ContactSendRemittanceMethodo()
+        {
+            window.open("https://api.whatsapp.com/send?phone=+15022943409&text=!Buenas me gustaria enviar "+document.getElementById("RemittanceTextBoxValueSend").value+" "+document.getElementById("RemittanceComboBoxTypeValueSend").value +" y recibir "+document.getElementById("RemittanceTextBoxValueRecibe").value+" "+document.getElementById("RemittanceComboBoxTypeValueRecibe").value);
+        }
+
+        
+
+
+        </script>
