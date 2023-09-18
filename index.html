@@ -1,11 +1,10 @@
 ﻿
 
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="DEVBoxWARE.ico">
     <meta itemprop="description" content="Creation of applications and technical tools for personal or business use">
 
     <link rel="stylesheet" href="./styles.css" />
@@ -65,7 +64,7 @@
 
 <script>
 
-    if(window.location.toString().includes("?start")==true)
+    if(window.location.toString().includes("?start")===true)
     {
         fetch(window.location.origin.toString()+'./start.html').then(response => response.text()).then(text =>
         {
@@ -82,7 +81,7 @@
 
         document.getElementById("NavDocsStart").style.color = "rgb(0, 191, 255)";
     }
-    else if(window.location.toString().includes("?downloads")==true)
+    else if(window.location.toString().includes("?downloads")===true)
     {
         fetch(window.location.origin.toString()+'./downloads.html').then(response => response.text()).then(text =>
         {
@@ -142,10 +141,7 @@
 <div id="footer" class="wrapper">
     <a href="#" class="fa fa-chevron-up buttomTOPmove" ></a>
     <div>
-
-        <center>
             Web Developer: <a style="text-decoration:none;font-weight: bolder;" href="https://github.com/devboxware">DEVBox|WARE</a><br>-All rights reserved 2023 Copyright  ©
-        </center>
     </div>
 
 </div>
