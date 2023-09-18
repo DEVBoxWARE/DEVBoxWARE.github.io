@@ -155,6 +155,277 @@
                             </div>
 
                         </div>
+
+                        <script>
+
+                            var EURValue;
+                            var USDValue;
+                            var MLCValue;
+
+                            var ExchangeEUR_USD;
+                            var ExchangeEUR_MLC;
+
+                            var ExchangeUSD_EUR;
+                            var ExchangeUSD_MLC;
+
+                            var ExchangeMLC_EUR;
+                            var ExchangeMLC_USD;
+
+                            function AllowOnliNumbers(input) {
+                                input.addEventListener('input', function() {
+                                    this.value = this.value.replace(/[^0-9.]/g, '');
+                                });
+                            }
+
+
+
+                            function GetCurrencyValue() {
+
+                                fetch('https://eltoque.com')
+                                    .then(response => response.text())
+                                    .then(html => {
+                                        const parser = new DOMParser();
+                                        const doc = parser.parseFromString(html, 'text/html');
+                                        //const elements = doc.getElementsByClassName('price-text change-plus');
+
+                                        const elements = doc.getElementsByClassName('price-text');
+                                        const ElementsT_cell = doc.getElementsByClassName('t-cell');
+
+                                        Array.from(ElementsT_cell).forEach(function(element) {
+                                            console.log(element);
+                                        });
+
+
+
+                                        var valueText = elements[0].textContent.trim();
+                                        var valueArray = valueText.split(" ");
+                                        EURValue =parseFloat(valueArray[0]);
+
+                                        valueText = elements[1].textContent.trim();
+                                        valueArray = valueText.split(" ");
+                                        USDValue =parseFloat(valueArray[0]);
+
+                                        valueText = elements[2].textContent.trim();
+                                        valueArray = valueText.split(" ");
+                                        MLCValue =parseFloat(valueArray[0]);
+
+
+                                        document.getElementById("EURValue").innerHTML=EURValue+" CUP";
+                                        document.getElementById("USDValue").innerHTML=USDValue+" CUP";
+                                        document.getElementById("MLCValue").innerHTML=MLCValue+" CUP";
+
+
+                                        ExchangeEUR_USD=parseFloat((EURValue/USDValue));
+                                        ExchangeEUR_MLC=parseFloat((EURValue/MLCValue));
+
+                                        ExchangeUSD_EUR=parseFloat((USDValue/EURValue));
+                                        ExchangeUSD_MLC=parseFloat((USDValue/MLCValue));
+
+                                        ExchangeMLC_EUR=parseFloat((MLCValue/EURValue));
+                                        ExchangeMLC_USD=parseFloat((MLCValue/USDValue));
+
+                                    })
+                                    .catch(error => {
+                                        console.error('Error:', error);
+                                    });
+
+
+                            }
+                            GetCurrencyValue();
+
+
+
+                            function CalculateExchangeSend()
+                            {
+                                try
+                                {
+                                    if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="EUR")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeEUR_USD).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeEUR_MLC).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*EURValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+                                        }
+                                    }
+
+                                    if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="USD")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeUSD_EUR).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeUSD_MLC).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*USDValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+                                        }
+                                    }
+
+                                    if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="MLC")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeMLC_USD).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*ExchangeMLC_EUR).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value*MLCValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+                                        }
+                                    }
+
+                                    if(document.getElementById("ExchangeComboBoxTypeValueSend").value=="CUP")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value/USDValue).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value/EURValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value/MLCValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueRecibe").value=parseFloat(document.getElementById("ExchangeTextBoxValueSend").value).toFixed(2);
+                                        }
+                                    }
+                                }
+                                catch
+                                {
+                                }
+
+                            }
+
+                            function CalculateExchangeReceive()
+                            {
+
+                                try
+                                {
+
+                                    if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="EUR")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat((document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_USD)).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_MLC).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/EURValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                                        }
+                                    }
+                                    else if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="USD")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeUSD_EUR).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeUSD_MLC).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/USDValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                                        }
+                                    }
+                                    else if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="MLC")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeMLC_EUR).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeMLC_USD).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/MLCValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                                        }
+                                    }
+                                    else if (document.getElementById("ExchangeComboBoxTypeValueSend").value=="CUP")
+                                    {
+                                        if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="EUR")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value*EURValue).toFixed(2);
+
+                                        }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="USD")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value*USDValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="MLC")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value*MLCValue).toFixed(2);
+                                        }
+                                        else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value=="CUP")
+                                        {
+                                            document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value).toFixed(2);
+                                        }
+                                    }
+
+                                }
+                                catch
+                                {
+                                }
+                            }
+
+                            AllowOnliNumbers(document.getElementById("ExchangeTextBoxValueSend"));
+                            AllowOnliNumbers(document.getElementById("ExchangeTextBoxValueRecibe"));
+
+                            document.getElementById("ExchangeTextBoxValueSend").addEventListener("input", CalculateExchangeSend);
+                            document.getElementById("ExchangeComboBoxTypeValueSend").addEventListener("change", CalculateExchangeSend);
+                            document.getElementById("ExchangeComboBoxTypeValueRecibe").addEventListener("change", CalculateExchangeSend);
+                            document.getElementById("ExchangeTextBoxValueRecibe").addEventListener("input", CalculateExchangeReceive);
+
+
+                            
+                            
+                        </script>
                     </center>
                     
                 </div>
