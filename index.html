@@ -22,25 +22,7 @@
     <div class="loader" ></div>
     Cargando
 </div>
-<script>
-    // Espera a que se cargue completamente la página
-    window.addEventListener('load', function() {
-        // Obtiene el elemento HTML donde se mostrará el porcentaje de carga
-        var progressBar = document.getElementById('loader-container');
 
-        // Obtiene el valor actual de la posición de desplazamiento vertical
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-        // Obtiene la altura total de la página
-        var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-
-        // Calcula el porcentaje de carga
-        var percent = Math.floor((scrollTop / (scrollHeight - window.innerHeight)) * 100);
-
-        // Muestra el porcentaje de carga en el elemento HTML
-        progressBar.innerHTML = percent + '%';
-    });
-</script>
 
 
 
