@@ -17,7 +17,7 @@
     border-radius: 50%;
     border: 5px solid #ffffff;
     border-color: #ffffff transparent #ffffff transparent;
-    animation: spinner 0.8s linear infinite;
+    animation: spinner 1s linear infinite;
   }
   
   @keyframes spinner {
