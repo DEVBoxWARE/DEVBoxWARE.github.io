@@ -587,8 +587,8 @@
             {
                 if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value==="USD")
                 {
-                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat((document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_USD)).toFixed(2);
-
+                    document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_USD).toFixed(2);
+  
                 }else if(document.getElementById("ExchangeComboBoxTypeValueRecibe").value==="MLC")
                 {
                     document.getElementById("ExchangeTextBoxValueSend").value=parseFloat(document.getElementById("ExchangeTextBoxValueRecibe").value/ExchangeEUR_MLC).toFixed(2);
