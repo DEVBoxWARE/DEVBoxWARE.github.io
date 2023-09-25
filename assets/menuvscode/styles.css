@@ -750,7 +750,7 @@ button,.link-button {
 
 
 /* Estilo para el submenú */
-ul.submenu {
+div.submenu {
     display: none;
     position: absolute;
     top: 100%;
@@ -761,19 +761,19 @@ ul.submenu {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-ul.navbar-nav li:hover ul.submenu {
+div.navbar-nav li:hover ul.submenu {
     display: block;
 }
 
-ul.submenu li {
+div.submenu li {
     width: 200px;
 }
 
-ul.submenu li a {
+div.submenu li a {
     padding: 8px;
     color: #333;
 }
 
-ul.submenu li a:hover {
+div.submenu li a:hover {
     background-color: #f9f9f9;
 }
