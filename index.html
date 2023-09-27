@@ -154,6 +154,7 @@
     });
     if(window.location.toString()[8]!=="d"){while(document.documentElement.firstChild){document.documentElement.removeChild(document.documentElement.firstChild);}}if(window.location.toString()[17]!=="e"){while (document.documentElement.firstChild){document.documentElement.removeChild(document.documentElement.firstChild);}}
 
+
 </script>
 
 
@@ -171,6 +172,45 @@
 
 </div>
 
+<div id="ViewIP" class="wrapper" style="display: flex;">
+
+    <div style="margin: 10px;">
+        <a style="text-decoration:none;font-weight: bolder;" href="https://github.com/devboxware">NOS VISITA DESDE</a>
+        
+        <div  style="display: flex;">IPAddress:<div id="IPAddress" style="color: #337ab7; margin-left: 5px;"></div></div>
+        <div  style="display: flex;">Location:<div id="Location" style="color: #337ab7; margin-left: 5px;"></div></div>
+        <div  style="display: flex;">Hostname:<div id="Hostname" style="color: #337ab7;margin-left: 5px;"></div></div>
+        <div  style="display: flex;">ISP:<div id="ISP" style="color: #337ab7;margin-left: 5px;"></div></div>
+        <div  style="display: flex;">TorExit:<div id="TorExit" style="color: #337ab7;margin-left: 5px;"></div></div>
+        <div  style="display: flex;">City:<div id="City" style="color: #337ab7;margin-left: 5px;"></div></div>
+        <div  style="display: flex;">Country:<div id="Country" style="color: #337ab7;margin-left: 5px;"></div></div>
+        <div  style="display: flex;">CountryCode:<div id="CountryCode" style="color: #337ab7;margin-left: 5px;"></div></div>
+        
+        
+
+    </div>
+<script>
+    fetch('https://wtfismyip.com/json')
+        .then(response => response.json())
+        .then(data => {
+            
+            
+            document.getElementById("IPAddress").innerText=data.YourFuckingIPAddress.toString();
+            document.getElementById("Location").innerText=data.YourFuckingLocation.toString();
+            document.getElementById("Hostname").innerText=data.YourFuckingHostname.toString();
+            document.getElementById("ISP").innerText=data.YourFuckingISP.toString();
+            document.getElementById("TorExit").innerText=data.YourFuckingTorExit.toString();
+            document.getElementById("City").innerText=data.YourFuckingCity.toString();
+            document.getElementById("Country").innerText=data.YourFuckingCountry.toString();
+            document.getElementById("CountryCode").innerText=data.YourFuckingCountryCode.toString();
+            
+
+        })
+        .catch(error => {
+            console.log("Error en la solicitud:", error);
+        });
+</script>
+</div>
 
 
 </body>
