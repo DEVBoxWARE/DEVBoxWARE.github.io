@@ -53,8 +53,8 @@
                 <li>
                     <a id="NavDocsDownloads" class="fa fa-download" href="#"><span> DESCARGAS</span></a>
                     <ul class="submenu nav navbar-nav navbar-left fa">
-                        <li><a href=".?downloads">PC</a></li>
-                        <li><a href="#">ANDROID</a></li> 
+                        <li><a href=".?downloadsPC">PC</a></li>
+                        <li><a href=".?downloadsANDROID">ANDROID</a></li> 
                     </ul>
                 </li>
             </ul>
@@ -90,18 +90,36 @@
     }
     else if(window.location.toString().includes("?downloads")===true)
     {
-        fetch(window.location.origin.toString()+'./downloads/PC.html').then(response => response.text()).then(text =>
+        if (window.location.toString().includes("?downloadsPC")===true)
         {
-            document.getElementById("MyContainer").innerHTML=text
-            var scriptElements = document.getElementById("MyContainer").getElementsByTagName('script');
+            fetch(window.location.origin.toString()+'./downloads/PC.html').then(response => response.text()).then(text =>
+            {
+                document.getElementById("MyContainer").innerHTML=text
+                var scriptElements = document.getElementById("MyContainer").getElementsByTagName('script');
 
-            for (var i = 0; i < scriptElements.length; i++) {
-                var script = document.createElement('script');
-                script.textContent = scriptElements[i].textContent;
-                document.head.appendChild(script);
-            }
+                for (var i = 0; i < scriptElements.length; i++) {
+                    var script = document.createElement('script');
+                    script.textContent = scriptElements[i].textContent;
+                    document.head.appendChild(script);
+                }
 
-        });
+            });
+        }else if(window.location.toString().includes("?downloadsANDROID")===true)
+        {
+            fetch(window.location.origin.toString()+'./downloads/ANDROID.html').then(response => response.text()).then(text =>
+            {
+                document.getElementById("MyContainer").innerHTML=text
+                var scriptElements = document.getElementById("MyContainer").getElementsByTagName('script');
+
+                for (var i = 0; i < scriptElements.length; i++) {
+                    var script = document.createElement('script');
+                    script.textContent = scriptElements[i].textContent;
+                    document.head.appendChild(script);
+                }
+
+            });
+        }
+        
 
         document.getElementById("NavDocsDownloads").style.color = "rgb(0, 191, 255)";
     }
