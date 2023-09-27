@@ -90,7 +90,7 @@
     }
     else if(window.location.toString().includes("?downloads")===true)
     {
-        fetch(window.location.origin.toString()+'./downloads.html').then(response => response.text()).then(text =>
+        fetch(window.location.origin.toString()+'./downloads/PC.html').then(response => response.text()).then(text =>
         {
             document.getElementById("MyContainer").innerHTML=text
             var scriptElements = document.getElementById("MyContainer").getElementsByTagName('script');
