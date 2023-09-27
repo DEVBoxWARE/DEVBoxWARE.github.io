@@ -762,7 +762,7 @@ ul.submenu {
 }
 
 ul.navbar-nav li:hover ul.submenu {
-    display: block;
+    display: contents;
 }
 
 ul.submenu li {
