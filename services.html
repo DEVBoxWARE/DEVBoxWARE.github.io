@@ -210,7 +210,7 @@
                         </div>
 
                         <div>
-                            <input title="WhiteShadowExchange" id="IMPORTextBoxValueSend" type="text" inputmode="numeric" style="
+                            <input title="WhiteShadowExchange" id="WeightTextBoxValue" type="text" inputmode="numeric" style="
                         background-color: #2c2c32;
                         color: white;
                         border: 0.1px solid white;
@@ -218,7 +218,7 @@
                         text-align: center;
                         border-radius: 20px;
                         ">
-                            <select title="BlueShadowButtomActions" id="IMPORTComboBoxTypeValueSend" style="background-color: rgba(0, 96, 164);
+                            <select title="BlueShadowButtomActions" id="WeightComboBoxTypeValue" style="background-color: rgba(0, 96, 164);
                         color: white;
                         /*border: 0.1px solid white;*/
                         padding: 5px;
@@ -239,7 +239,7 @@
                         </div>
 
                         <div>
-                            <input title="WhiteShadowExchange" id="VALUETextBoxValueSend" type="text" inputmode="numeric" style="
+                            <input title="WhiteShadowExchange" id="VALUETextBoxValue" type="text" inputmode="numeric" style="
                         background-color: #2c2c32;
                         color: white;
                         border: 0.1px solid white;
@@ -247,7 +247,7 @@
                         text-align: center;
                         border-radius: 20px;
                         ">
-                            <select title="BlueShadowButtomActions" id="VALUEComboBoxTypeValueSend" style="background-color: rgba(0, 96, 164);
+                            <select title="BlueShadowButtomActions" id="VALUEComboBoxTypeValue" style="background-color: rgba(0, 96, 164);
                         color: white;
                         /*border: 0.1px solid white;*/
                         padding: 5px;
@@ -267,7 +267,7 @@
                         </div>
 
                         <div>
-                            <input title="WhiteShadowExchange" id="AMOUNTextBoxValueSend" type="text" inputmode="numeric" style="
+                            <input title="WhiteShadowExchange" id="AMOUNTextBoxValue" type="text" inputmode="numeric" style="
                         background-color: #2c2c32;
                         color: white;
                         border: 0.1px solid white;
@@ -289,10 +289,31 @@
                         </div>
                     </div>
 
+                    <div style="margin: 20px;">
+                        <div>
+                            <span class="fa HeaderText">TIPO_IMPORT</span>
+                        </div>
+
+                        <div>
+                            <select title="BlueShadowButtomActions" id="TYPEIMPORTComboBoxTypeValueSend" style="background-color: rgba(0, 96, 164);
+                        color: white;
+                        /*border: 0.1px solid white;*/
+                        padding: 5px;
+                        text-align: center;
+                        border-radius: 20px;
+                        ">
+
+                                <option value="EXPRESS">EXPRESS</option>
+                                <option value="REGULAR">REGULAR</option>
+                                <option value="BARCO">BARCO</option>
+                            </select>
+
+                        </div>
+                    </div>
 
 
                     <div>
-                        <button id="CalculeIMPORT" onclick="ContactSendRemittanceMethodo()" style="
+                        <button id="CalculeIMPORT" onclick="Calculate()" style="
                     background-color: rgba(0, 96, 164);
                     color: white;
                     padding: 10px 20px;
@@ -303,9 +324,44 @@
                     display: inline-block;
                     font-size: 16px;
                     cursor: pointer;
-                   " title="BlueShadowButtomActions">CONTACTAR ENVÍO</button>
+                   " title="BlueShadowButtomActions">CALCULAR</button>
                     </div>
 
+                    <script>
+                        function Calculate()
+                        {
+                            var pound=0;
+                            var TotalPrice=0;
+                            var Price=0;
+
+                            if (document.getElementById("WeightComboBoxTypeValue").value=="KG")
+                            {
+                                pound=document.getElementById("WeightTextBoxValue").value*2.21*document.getElementById("AMOUNTextBoxValue").value;
+                            }
+                            else if(document.getElementById("WeightComboBoxTypeValue").value=="LB")
+                            {
+                                pound=document.getElementById("WeightTextBoxValue").value*document.getElementById("AMOUNTextBoxValue").value;
+                            }
+
+                            if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="EXPRESS")
+                            {
+                                TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*12;
+                            }
+                            else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="REGULAR")
+                            {
+                                TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*10;
+                            }
+                            else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="BARCO")
+                            {
+                                TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*8;
+                            }
+
+                            Price =TotalPrice/document.getElementById("AMOUNTextBoxValue").value;
+
+                            alert("Costo total:"+TotalPrice+"\\n\\n"+"Precio por producto"+Price+"\\n\\n"+"Peso total LB"+pound+"\\n\\n");
+
+                        }
+                    </script>
 
             </div>
 
