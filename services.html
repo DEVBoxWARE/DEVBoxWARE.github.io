@@ -371,12 +371,12 @@
 
                             Price =TotalPrice/document.getElementById("AMOUNTextBoxValue").value;
                             alert("asasasas");
-                            document.getElementById("PesoTotal").value="Peso Total:";
-                            document.getElementById("PesoTotalDate").value=pound+"LB";
-                            document.getElementById("CostoTotal").value="Costo Total:";
-                            document.getElementById("CostoTotalDate").value="$"+TotalPrice;
-                            document.getElementById("CostoUni").value="Costo*Unidad";
-                            document.getElementById("CostoUniDate").value="$"+Price;
+                            document.getElementById("PesoTotal").innerText="Peso Total:";
+                            document.getElementById("PesoTotalDate").innerText=pound+"LB";
+                            document.getElementById("CostoTotal").innerText="Costo Total:";
+                            document.getElementById("CostoTotalDate").innerText="$"+TotalPrice;
+                            document.getElementById("CostoUni").innerText="Costo*Unidad";
+                            document.getElementById("CostoUniDate").innerText="$"+Price;
                             alert("asasasas");
                         }
                     </script>
