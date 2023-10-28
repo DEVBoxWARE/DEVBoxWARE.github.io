@@ -382,13 +382,13 @@
 
 
                             document.getElementById("PesoTotal").innerText="Peso Total:";
-                            document.getElementById("PesoTotalDate").innerText=pound+"LB";
+                            document.getElementById("PesoTotalDate").innerText=pound.toFixed(2)+"LB";
 
                             document.getElementById("CostoTotal").innerText="Costo Total:";
-                            document.getElementById("CostoTotalDate").innerText="$"+TotalPrice;
+                            document.getElementById("CostoTotalDate").innerText="$"+TotalPrice.toFixed(2);
 
                             document.getElementById("CostoUni").innerText="Costo * Unidad:";
-                            document.getElementById("CostoUniDate").innerText="$"+Price;
+                            document.getElementById("CostoUniDate").innerText="$"+Price.toFixed(2);
 
                         }
                     </script>
