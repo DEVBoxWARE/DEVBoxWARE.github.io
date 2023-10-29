@@ -350,6 +350,16 @@
 
                     <script>
 
+                        function llevarAMultiploDe5(numero) {
+                            // Divide el número entre 5 y redondea hacia arriba
+                            var cociente = Math.ceil(numero / 5);
+
+                            // Multiplica el cociente por 5 para obtener el múltiplo de 5 más cercano
+                            var multiploDe5 = cociente * 5;
+
+                            return multiploDe5;
+                        }
+
                         function Calculate()
                         {
                             var pound=0;
@@ -378,7 +388,8 @@
                                 TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*8;
                             }
 
-                            Price =TotalPrice/document.getElementById("AMOUNTextBoxValue").value;
+                            Price =llevarAMultiploDe5(TotalPrice/document.getElementById("AMOUNTextBoxValue").value);
+
 
 
                             document.getElementById("PesoTotal").innerText="Peso Total:";
