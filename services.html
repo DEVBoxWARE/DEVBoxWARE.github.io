@@ -377,18 +377,18 @@
 
                             if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="EXPRESS")
                             {
-                                TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*12;
+                                TotalPrice=llevarAMultiploDe5(document.getElementById("VALUETextBoxValue").value*1.1)*document.getElementById("AMOUNTextBoxValue").value+pound*12;
                             }
                             else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="REGULAR")
                             {
-                                TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*10;
+                                TotalPrice=llevarAMultiploDe5(document.getElementById("VALUETextBoxValue").value*1.1)*document.getElementById("AMOUNTextBoxValue").value+pound*10;
                             }
                             else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="BARCO")
                             {
-                                TotalPrice=document.getElementById("VALUETextBoxValue").value*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*8;
+                                TotalPrice=llevarAMultiploDe5(document.getElementById("VALUETextBoxValue").value*1.1)*document.getElementById("AMOUNTextBoxValue").value+pound*8;
                             }
 
-                            Price =llevarAMultiploDe5(TotalPrice/document.getElementById("AMOUNTextBoxValue").value);
+                            Price =TotalPrice/document.getElementById("AMOUNTextBoxValue").value;
 
 
 
