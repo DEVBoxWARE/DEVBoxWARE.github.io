@@ -24,12 +24,7 @@
 </div>
 
 
-<div id="particles-js" style="width: 100%;height: 200%;margin: 0;padding: 0;overflow: hidden;position: absolute;">
-    <canvas class="particles-js-canvas-el"></canvas>
-</div>
-
-<script src="./assets/particles/particles.js.descarga"></script>
-<script src="./assets/particles/app.js.descarga"></script>
+<div id="particles-js" style="width: 100%;height: 100%;position: absolute;"></div>
 
 
 <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="1">
@@ -75,6 +70,25 @@
 <div id='MyContainer'></div>
 
 
+
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS('particles-js', {
+        particles: {
+            number: {
+                value: 80, // Cambia el número de partículas según tus necesidades
+            },
+            size: {
+                value: 5, // Ajusta el tamaño de las partículas
+                random: true, // Activa la variabilidad del tamaño
+                anim: {
+                    enable: false,
+                },
+            },
+        },
+    });
+</script>
 
 
 
