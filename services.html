@@ -226,6 +226,7 @@
                         ">
 
                                 <option value="LB">LB</option>
+                                <option value="OZ">OZ</option>
                                 <option value="KG">KG</option>
                             </select>
 
@@ -368,6 +369,10 @@
                             if (document.getElementById("WeightComboBoxTypeValue").value=="KG")
                             {
                                 pound=document.getElementById("WeightTextBoxValue").value*2.21*document.getElementById("AMOUNTextBoxValue").value;
+                            }
+                            else if(document.getElementById("WeightComboBoxTypeValue").value=="OZ")
+                            {
+                                pound=document.getElementById("WeightTextBoxValue").value*0.0625*document.getElementById("AMOUNTextBoxValue").value;
                             }
                             else if(document.getElementById("WeightComboBoxTypeValue").value=="LB")
                             {
