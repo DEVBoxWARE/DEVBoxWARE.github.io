@@ -382,15 +382,37 @@
 
                             if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="EXPRESS")
                             {
-                                TotalPrice=llevarAMultiploDe5(document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*12);
+                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*12;
+                                if (PriceBuy>100)
+                                {
+                                    TotalPrice=llevarAMultiploDe5(PriceBuy);
+                                }else
+                                {
+                                    TotalPrice= PriceBuy;
+                                }
+
                             }
                             else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="REGULAR")
                             {
-                                TotalPrice=llevarAMultiploDe5(document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*8);
+                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*8;
+                                if (PriceBuy>100)
+                                {
+                                    TotalPrice=llevarAMultiploDe5(PriceBuy);
+                                }else
+                                {
+                                    TotalPrice= PriceBuy;
+                                }
                             }
                             else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="BARCO")
                             {
-                                TotalPrice=llevarAMultiploDe5(document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*5);
+                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*5;
+                                if (PriceBuy>100)
+                                {
+                                    TotalPrice=llevarAMultiploDe5(PriceBuy);
+                                }else
+                                {
+                                    TotalPrice= PriceBuy;
+                                }
                             }
 
                             Price =TotalPrice/document.getElementById("AMOUNTextBoxValue").value;
