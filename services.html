@@ -284,6 +284,7 @@
                         ">
 
                                 <option value="UNI">UNI</option>
+                                <option value="DZ">DZ</option>
                             </select>
 
                         </div>
@@ -365,6 +366,9 @@
                             var pound=0;
                             var TotalPrice=0;
                             var Price=0;
+                            var AMOUNT=0;
+
+
 
                             if (document.getElementById("WeightComboBoxTypeValue").value=="KG")
                             {
@@ -379,10 +383,19 @@
                                 pound=document.getElementById("WeightTextBoxValue").value*document.getElementById("AMOUNTextBoxValue").value;
                             }
 
+                            if (document.getElementById("AMOUNTComboBoxTypeValueSend").value=="UNI")
+                            {
+                                AMOUNT=document.getElementById("AMOUNTextBoxValue").value;
+                            }
+                            else if (document.getElementById("AMOUNTComboBoxTypeValueSend").value=="DZ")
+                            {
+                                AMOUNT=document.getElementById("AMOUNTextBoxValue").value*12;
+                            }
+
 
                             if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="EXPRESS")
                             {
-                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*12;
+                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*AMOUNT+pound*12;
                                 if (PriceBuy>100)
                                 {
                                     TotalPrice=llevarAMultiploDe5(PriceBuy);
@@ -394,7 +407,7 @@
                             }
                             else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="REGULAR")
                             {
-                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*8;
+                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*AMOUNT+pound*8;
                                 if (PriceBuy>100)
                                 {
                                     TotalPrice=llevarAMultiploDe5(PriceBuy);
@@ -405,7 +418,7 @@
                             }
                             else if (document.getElementById("TYPEIMPORTComboBoxTypeValueSend").value=="BARCO")
                             {
-                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*document.getElementById("AMOUNTextBoxValue").value+pound*5;
+                                var PriceBuy=document.getElementById("VALUETextBoxValue").value*1.1*1.1*AMOUNT+pound*5;
                                 if (PriceBuy>100)
                                 {
                                     TotalPrice=llevarAMultiploDe5(PriceBuy);
@@ -415,7 +428,7 @@
                                 }
                             }
 
-                            Price =TotalPrice/document.getElementById("AMOUNTextBoxValue").value;
+                            Price =TotalPrice/AMOUNT;
 
 
 
