@@ -20,6 +20,24 @@
         <div class="loader" style="margin: 10px" ></div>
         Cargando
 </div>
+<div id="snow-container">
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.style.left = Math.random() * 100 + "vw"; /* Posición horizontal aleatoria */
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; /* Duración de la animación aleatoria */
+            document.getElementById("snow-container").appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove(); /* Eliminar el copo de nieve después de la animación */
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 200); /* Crear un nuevo copo de nieve cada 100ms */
+    </script>
+</div>
+
 
 
 <div id="particles-js" style="z-index: -1; width: 100%;height: 100%;position: fixed;"></div>

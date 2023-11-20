@@ -1,0 +1,29 @@
+
+
+#snow-container {
+    position: fixed; /* Posición fija */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* No interactuable */
+}
+
+.snowflake {
+    position: absolute; /* Posición absoluta */
+    width: 10px; /* Ancho de los copos de nieve */
+    height: 10px; /* Alto de los copos de nieve */
+    background-color: #fff; /* Color de los copos de nieve */
+    border-radius: 50%; /* Forma redondeada */
+    pointer-events: none; /* No interactuable */
+    animation: snowfall linear infinite; /* Animación de caída */
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg); /* Inicio arriba de la ventana */
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg); /* Fin abajo de la ventana */
+    }
+}
