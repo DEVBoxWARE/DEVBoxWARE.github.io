@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcf693f5-f568-469b-ba1e-ced7a35979f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/ChatGPT/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/ChatGPT/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/ChatGPT/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/downloads/app/GESPyme/DEVLauncher.dbw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/downloads/app/GESPyme/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/downloads/app/GESPyme/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/downloads/app/GESPyme/install.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -37,21 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programacion/Trabajos_Web/DEVBoxWARE.github.io&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Programacion/Trabajos_Web/DEVBoxWARE.github.io/assets",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Trabajos_Web\DEVBoxWARE.github.io\assets" />
+      <recent name="D:\Programacion\Trabajos_Web\DEVBoxWARE.github.io\downloads\app\GESPyme" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programacion\Trabajos_Web\DEVBoxWARE.github.io\assets\particles" />
     </key>
@@ -71,6 +83,7 @@
       <workItem from="1700041739650" duration="2693000" />
       <workItem from="1700459483357" duration="7135000" />
       <workItem from="1700723825366" duration="1281000" />
+      <workItem from="1700886641859" duration="2318000" />
     </task>
     <servers />
   </component>
