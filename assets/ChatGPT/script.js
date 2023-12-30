@@ -1,4 +1,5 @@
-function sendMessage() {
+// JavaScript (app.js)
+async function sendMessage() {
     const userInput = document.getElementById('user-input');
     const message = userInput.value.trim();
 
@@ -6,16 +7,31 @@ function sendMessage() {
         return;
     }
 
-    // Append user message to the chat
+    // Reemplaza 'tu_clave_de_api' con tu propia clave API
+    const apiKey = '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';
+
+    // Enviar solicitud a la API de OpenAI
+    const response = await fetch('https://api.openai.com/v1/engines/gpt-3.5-turbo/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+            prompt: message,
+            max_tokens: 150,
+        }),
+    });
+
+    const data = await response.json();
+
+    // Agregar el mensaje del usuario al chat
     appendMessage(message, 'user-message');
 
-    // Simulate a response from the assistant (replace this with API call)
-    setTimeout(() => {
-        const assistantMessage = 'This is a response from the assistant.';
-        appendMessage(assistantMessage, 'assistant-message');
-    }, 500);
+    // Agregar la respuesta del asistente al chat
+    appendMessage(data.choices[0].text.trim(), 'assistant-message');
 
-    // Clear the input field
+    // Limpiar el campo de entrada
     userInput.value = '';
 }
 
@@ -28,6 +44,6 @@ function appendMessage(message, messageType) {
 
     chatMessages.appendChild(messageDiv);
 
-    // Scroll to the bottom of the chat messages
+    // Scroll hasta el final de los mensajes del chat
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
