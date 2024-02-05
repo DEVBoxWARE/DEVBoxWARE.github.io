@@ -638,7 +638,8 @@
     var Tax_USDT_to_MLC=0;
     var Tax_USD_Zelle_to_USDT=7;
     var Tax_MXN_SPEI_to_USD_Cash=16;
-    var Tax_MXN_SPEI_to_MLC=16;
+    var Tax_MXN_SPEI_to_MLC=10;
+    var Tax_MXN_SPEI_to_USDT=10;
 
     function AllowOnliNumbers(input) {
         input.addEventListener('input', function() {
@@ -962,6 +963,12 @@
                     document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_MXN_SPEI_to_MLC/100)).toFixed(2);
                     document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_MXN_SPEI_to_MLC+"%";
                 }
+                else if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value==="USDT")
+                {
+                    document.getElementById("RemittanceTextBoxValueRecibe").value=parseFloat(document.getElementById("RemittanceTextBoxValueSend").value/(1-Tax_MXN_SPEI_to_USDT/100)).toFixed(2);
+                    document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_MXN_SPEI_to_USDT/100)).toFixed(2);
+                    document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_MXN_SPEI_to_USDT+"%";
+                }
 
 
 
@@ -1041,6 +1048,13 @@
                     document.getElementById("RemittanceTextBoxValueSend").value=parseFloat(document.getElementById("RemittanceTextBoxValueRecibe").value/(1 - Tax_MXN_SPEI_to_MLC / 100)).toFixed(2);
                     document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_MXN_SPEI_to_MLC/100)).toFixed(2);
                     document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_MXN_SPEI_to_MLC+"%";
+                }
+                else if(document.getElementById("RemittanceComboBoxTypeValueRecibe").value==="USDT")
+                {
+
+                    document.getElementById("RemittanceTextBoxValueSend").value=parseFloat(document.getElementById("RemittanceTextBoxValueRecibe").value/(1 - Tax_MXN_SPEI_to_USDT / 100)).toFixed(2);
+                    document.getElementById("RemittanceTaxValue").innerHTML="$"+parseFloat(document.getElementById("RemittanceTextBoxValueSend").value*(Tax_MXN_SPEI_to_USDT/100)).toFixed(2);
+                    document.getElementById("RemittanceTaxPorcentValue").innerHTML=Tax_MXN_SPEI_to_USDT+"%";
                 }
 
             }
